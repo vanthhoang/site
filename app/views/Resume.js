@@ -4,23 +4,22 @@ import Helmet from 'react-helmet';
 
 import Main from '../layouts/Main';
 
-import Education from '../components/Resume/Education';
+
 import Experience from '../components/Resume/Experience';
 import Skills from '../components/Resume/Skills';
-import Courses from '../components/Resume/Courses';
-import References from '../components/Resume/References';
+import Education from '../components/Resume/Education';
+//import Testing from '../components/Resume/Testing';
 
-import courses from '../data/resume/courses';
+
 import degrees from '../data/resume/degrees';
 import positions from '../data/resume/positions';
-import { skills, categories } from '../data/resume/skills';
+//import test from'../data/resume/test';
+import skills from '../data/resume/skills';
 
 const sections = [
-  'Education',
   'Experience',
   'Skills',
-  'Courses',
-  'References',
+  'Education'
 ];
 
 const Resume = () => (
@@ -36,14 +35,14 @@ const Resume = () => (
                 <a href={`#${sec.toLowerCase()}`}>{sec}</a>
               </h4>))}
           </div>
-
         </div>
       </header>
-      <Education data={degrees} />
       <Experience data={positions} />
-      <Skills skills={skills} categories={categories} />
-      <Courses data={courses} />
-      <References />
+      {/* <Skills skills={skills} categories={categories} /> */}
+      {/* <SkillTest /> */}
+      <Skills data = {skills}/>
+      <br></br>
+      <Education data={degrees} />
 
     </article>
   </Main>

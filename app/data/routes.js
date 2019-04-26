@@ -1,12 +1,8 @@
 const data = [
   {
     path: '/',
-    label: 'Michael D\'Angelo',
+    label: 'Van Hoang',
     index: true,
-  },
-  {
-    path: '/about',
-    label: 'About',
   },
   {
     path: '/resume',
@@ -14,16 +10,22 @@ const data = [
   },
   {
     path: '/projects',
-    label: 'Projects',
+    label: 'Mini Projects',
   },
   {
-    path: '/stats',
-    label: 'Stats',
+    path: '/funfacts',
+    label: 'Fun Facts',
+  },
+    {
+    path: '/traveling',
+    label: 'Traveling',
   },
   {
     path: '/contact',
     label: 'Contact',
   },
+
+
 ];
 
 export default data;

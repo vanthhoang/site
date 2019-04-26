@@ -4,9 +4,10 @@ import PropTypes from 'prop-types';
 const Job = ({ data }) => (
   <article className="jobs-container">
     <header>
-      <h4><a href={data.link}>{data.company}</a> - {data.position}</h4>
+      <h3>{data.positionCompany}</h3>
       <p className="daterange"> {data.daterange}</p>
     </header>
+    <u>{data.project}</u>
     <ul className="points">
       {data.points.map(point => (
         <li key={point}>{point}</li>
@@ -17,10 +18,11 @@ const Job = ({ data }) => (
 
 Job.propTypes = {
   data: PropTypes.shape({
-    link: PropTypes.string.isRequired,
-    company: PropTypes.string.isRequired,
-    position: PropTypes.string.isRequired,
+    positionCompany: PropTypes.string.isRequired,
+    // position: PropTypes.string.isRequired,
     daterange: PropTypes.string.isRequired,
+    project: PropTypes.string.isRequired,
+    // projects: PropTypes.arrayOf(ProTypes.string).isRequired,
     points: PropTypes.arrayOf(PropTypes.string).isRequired,
   }).isRequired,
 };

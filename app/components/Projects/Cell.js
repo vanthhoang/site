@@ -1,15 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import dayjs from 'dayjs';
+
+import data from '../../data/projects';
+
 
 const Cell = ({ data }) => (
   <div className="cell-container">
     <article className="mini-post">
       <header>
         <h3><a href={data.link}>{data.title}</a></h3>
-        <time className="published">{dayjs(data.date).format('MMMM, YYYY')}</time>
       </header>
-      <a href={data.link} className="image"><img src={`${BASE_PATH}/${data.image}`} alt="" /></a>
+      <a href={data.link} className="image"><img src={`${BASE_PATH}${data.image}`} alt="" /></a>
+      <br/><br/><br/>
       <div className="description">
         <p>{data.desc}</p>
       </div>
@@ -22,7 +24,6 @@ Cell.propTypes = {
     title: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
-    date: PropTypes.string.isRequired,
     desc: PropTypes.string.isRequired,
   }).isRequired,
 };
