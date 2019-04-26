@@ -1,6 +1,6 @@
 {
-  "name": "my-site",
-  "homepage": "https://vanthhoang.github.io/my-site/",
+  "name": "site",
+  "homepage": "https://vanthhoang.github.io/site",
   "version": "1.0.0",
   "private": true,
   "scripts": {
